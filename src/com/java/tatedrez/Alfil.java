@@ -1,11 +1,13 @@
 package com.java.tatedrez;
 
 public class Alfil extends Pieza {
+	
+	private String nombre = "alfil";
 
 	@Override
 	public String getNombre() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.nombre;
 	}
 
 	@Override

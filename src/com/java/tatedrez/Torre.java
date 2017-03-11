@@ -1,11 +1,13 @@
 package com.java.tatedrez;
 
 public class Torre extends Pieza{
+	
+	private String nombre = "torre";
 
 	@Override
 	public String getNombre() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.nombre;
 	}
 
 	@Override
