@@ -6,6 +6,10 @@ public class ManagerTablero {
 		casilla.setPieza(pieza);
 	}
 	
+	public void moverPieza(){
+		
+	}
+	
 	
 	public String casillaCualEsTuPieza(Casilla casilla){
 		if(casilla.getPieza()==null){

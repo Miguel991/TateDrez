@@ -2,14 +2,14 @@ package com.java.tatedrez;
 
 public class Casilla {
 
-	private int nombre;
+	private String nombre;
 	private String norte,noreste,este,sureste,sur,suroeste,oeste,noroeste;
 	private Pieza pieza;
 
 	
 	
 	
-	public Casilla(int nombre,String norte, String noreste, String este, String sureste, String sur, String suroeste, String oeste, String noroeste) {
+	public Casilla(String nombre,String norte, String noreste, String este, String sureste, String sur, String suroeste, String oeste, String noroeste) {
 		this.nombre = nombre;
 		this.norte = norte;
 		this.noreste = noreste;
@@ -25,7 +25,7 @@ public class Casilla {
 	
 	
 
-	public int getNombreCasilla() {
+	public String getNombreCasilla() {
 		return this.nombre;
 	}
 	

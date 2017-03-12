@@ -4,6 +4,11 @@ public abstract class Pieza {
 	
 	abstract public String getNombre();
 	
-	abstract public void moverFicha();
+	abstract public boolean moverFicha();
+	
+	abstract public void setPosicionFicha(String posicion);
+	
+	abstract public String getPosicionFicha();
+		
 
 }

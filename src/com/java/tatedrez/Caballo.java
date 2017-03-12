@@ -2,6 +2,7 @@ package com.java.tatedrez;
 
 public class Caballo extends Pieza {
 	
+	private String posicion;
 	private String nombre = "caballo";
 
 	@Override
@@ -11,9 +12,22 @@ public class Caballo extends Pieza {
 	}
 
 	@Override
-	public void moverFicha() {
+	public boolean moverFicha() {
 		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public void setPosicionFicha(String posicion) {
+		// TODO Auto-generated method stub
+		this.posicion = posicion;
 		
+	}
+
+	@Override
+	public String getPosicionFicha() {
+		// TODO Auto-generated method stub
+		return this.posicion;
 	}
 
 }
