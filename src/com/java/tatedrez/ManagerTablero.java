@@ -2,11 +2,17 @@ package com.java.tatedrez;
 
 public class ManagerTablero {
 	
+	private Pieza pieza;
+	private Casilla casilla;
+	
 	public void ponerPiezaEnCasilla(Pieza pieza, Casilla casilla){
 		casilla.setPieza(pieza);
+		pieza.setPosicionFicha(casilla.getNombreCasilla()); 
 	}
 	
-	public void moverPieza(){
+	public void moverPieza(Pieza pieza, Casilla casilla){
+		
+		pieza.moverFicha();
 		
 	}
 	
@@ -16,6 +22,10 @@ public class ManagerTablero {
 			return "casilla vacia";
 		}
 		return casilla.getPieza().getNombre();
+	}
+	
+	public int contar(){
+		return 1,8;
 	}
 
 }

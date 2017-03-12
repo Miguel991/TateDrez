@@ -13,9 +13,12 @@ public class Torre extends Pieza{
 
 	@Override
 	public boolean moverFicha() {
-		
-				
-		return true;
+		if(posicionesPosibles(this.posicion)!= "0"){
+			
+			return true;
+		}else{
+			return false;
+		}
 	}
 	
 	
@@ -34,9 +37,9 @@ public class Torre extends Pieza{
 	}
 
 	
-	private int[] posicionesPosibles() {
-		// TODO Auto-generated method stub
-		return null;
+	private String posicionesPosibles(String posicion) {
+		if(posicion == "1" ){}
+				return "0";
 	}
 
 }
