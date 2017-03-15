@@ -27,4 +27,40 @@ public class Tablero {
 		
 	}
 
+	public Casilla getCasillaUno() {
+		return casillaUno;
+	}
+
+	public Casilla getCasillaDos() {
+		return casillaDos;
+	}
+
+	public Casilla getCasillaTres() {
+		return casillaTres;
+	}
+
+	public Casilla getCasillaCuatro() {
+		return casillaCuatro;
+	}
+
+	public Casilla getCasillaCinco() {
+		return casillaCinco;
+	}
+
+	public Casilla getCasillaSeis() {
+		return casillaSeis;
+	}
+
+	public Casilla getCasillaSiete() {
+		return casillaSiete;
+	}
+
+	public Casilla getCasillaOcho() {
+		return casillaOcho;
+	}
+
+	public Casilla getCasillaNueve() {
+		return casillaNueve;
+	}
+
 }

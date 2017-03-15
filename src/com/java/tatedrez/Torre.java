@@ -12,13 +12,8 @@ public class Torre extends Pieza{
 	}
 
 	@Override
-	public boolean moverFicha() {
-		if(posicionesPosibles(this.posicion)!= "0"){
-			
-			return true;
-		}else{
-			return false;
-		}
+	public void moverFicha(Casilla casilla) {
+		casilla.setPieza(this);
 	}
 	
 	

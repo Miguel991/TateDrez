@@ -12,9 +12,8 @@ public class Caballo extends Pieza {
 	}
 
 	@Override
-	public boolean moverFicha() {
+	public void moverFicha(Casilla casilla) {
 		// TODO Auto-generated method stub
-		return true;
 	}
 
 	@Override

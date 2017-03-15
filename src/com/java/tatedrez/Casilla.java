@@ -4,7 +4,7 @@ public class Casilla {
 
 	private String nombre;
 	private String norte,noreste,este,sureste,sur,suroeste,oeste,noroeste;
-	private Pieza pieza;
+	private Pieza pieza = null;
 
 	
 	
