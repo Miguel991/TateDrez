@@ -9,6 +9,8 @@ public abstract class Pieza {
 	abstract public void setPosicionFicha(String posicion);
 	
 	abstract public String getPosicionFicha();
+	
+	abstract public boolean posicionValidaPieza(String casillaActual,String casillaFinal);
 		
 
 }

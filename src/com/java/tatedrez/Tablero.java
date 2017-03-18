@@ -1,5 +1,7 @@
 package com.java.tatedrez;
 
+import java.util.ArrayList;
+
 public class Tablero {
 	
 	private Casilla casillaUno;
@@ -11,6 +13,7 @@ public class Tablero {
 	private Casilla casillaSiete;
 	private Casilla casillaOcho;
 	private Casilla casillaNueve;
+	private ArrayList<Casilla> listaCasillas;
 	
 	public Tablero(){
 	//norte,noreste,este,sureste,sur,suroeste,oeste,noroeste
@@ -24,7 +27,21 @@ public class Tablero {
 		this.casillaSiete = new Casilla("7","norte","noreste","este",null,null,null,null,null);
 		this.casillaOcho = new Casilla("8","norte","noreste","este",null,null,null,"oeste","noroeste");
 		this.casillaNueve = new Casilla("9","norte",null,null,null,null,null,"oeste","noroeste");
-		
+		listaCasillas = new ArrayList<Casilla>(9);
+		listaCasillas.add(casillaUno);
+		listaCasillas.add(casillaDos);
+		listaCasillas.add(casillaTres);
+		listaCasillas.add(casillaCuatro);
+		listaCasillas.add(casillaCinco);
+		listaCasillas.add(casillaSeis);
+		listaCasillas.add(casillaSiete);
+		listaCasillas.add(casillaOcho);
+		listaCasillas.add(casillaNueve);
+
+	}
+	
+	public ArrayList<Casilla> getArrayCasillas(){
+		return listaCasillas;
 	}
 
 	public Casilla getCasillaUno() {

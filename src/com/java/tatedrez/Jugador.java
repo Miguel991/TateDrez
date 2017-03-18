@@ -7,6 +7,16 @@ public class Jugador {
 	private Alfil alfil;
 	private Caballo caballo;
 	private Tablero tablero;
+	private PosicionesEnum casillaUno;
+	private PosicionesEnum casillaDos;
+	private PosicionesEnum casillaTres;
+	private PosicionesEnum casillaCuatro;
+	private PosicionesEnum casillaCinco;
+	private PosicionesEnum casillaSeis;
+	private PosicionesEnum casillaSiete;
+	private PosicionesEnum casillaOcho;
+	private PosicionesEnum casillaNueve;
+	
 	
 	public Jugador(String nombre,Tablero tablero){
 		this.tablero = tablero;
@@ -15,14 +25,29 @@ public class Jugador {
 		this.alfil = new Alfil();
 		this.caballo = new Caballo();
 		this.m = new ManagerTablero();
+		this.casillaUno = PosicionesEnum.CASILLAUNO;
+		this.casillaDos = PosicionesEnum.CASILLADOS;
+		this.casillaTres = PosicionesEnum.CASILLATRES;
+		this.casillaCuatro = PosicionesEnum.CASILLACUATRO;
+		this.casillaCinco = PosicionesEnum.CASILLACINCO;
+		this.casillaSeis = PosicionesEnum.CASILLASEIS;
+		this.casillaSiete = PosicionesEnum.CASILLASIETE;
+		this.casillaOcho = PosicionesEnum.CASILLAOCHO;
+		this.casillaNueve = PosicionesEnum.CASILLANUEVE;
+		
+		
 	}
 	
-	public void jugadorPoneFichaPorPrimeraVez(Pieza pieza, Casilla casilla){
-		m.ponerPiezaEnCasilla(pieza, casilla);
+	public PosicionesEnum getCasillaUno() {
+		return casillaUno;
+	}
+
+	public void jugadorPoneFichaPorPrimeraVez(Pieza pieza, String casilla,Tablero tablero){
+		m.ponerPiezaEnCasilla(pieza, casilla, tablero);
 	}
 	
-	public void jugadorMueveFicha(Pieza pieza, Casilla casilla){
-		m.moverPieza(pieza, casilla);
+	public void jugadorMueveFicha(Pieza pieza, String nombreCasilla, Tablero tablero){
+		m.moverPieza(pieza, nombreCasilla,tablero);
 	}
 	
 	//para acceder a las piezas que tiene el jugador
