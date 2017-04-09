@@ -48,25 +48,46 @@ public class Torre extends Pieza{
 			
 			case "3":
 				//casillas validas 1,2,6,9
-				break;
+				if(casillaFinal=="1" || casillaFinal=="2"|| casillaFinal == "6" || casillaFinal =="9"){
+					return true;
+				}else{return false;}
+				
 			case "4":
 				//casillas validas 1,7,5,6
-				break;
+				if(casillaFinal=="1" || casillaFinal=="5"|| casillaFinal == "6" || casillaFinal =="7"){
+					return true;
+				}else{return false;}
+				
 			case "5":
 				//casilla validas 2,4,6,8
-				break;
+				if(casillaFinal=="2" || casillaFinal=="4"|| casillaFinal == "6" || casillaFinal =="8"){
+					return true;
+				}else{return false;}
+				
 			case "6":
 				//casillas validas 3,4,5,9
-				break;
+				if(casillaFinal=="3" || casillaFinal=="4"|| casillaFinal == "5" || casillaFinal =="9"){
+					return true;
+				}else{return false;}
+			
 			case "7":
 				//casillas validas 1,4,8,9
-				break;
+				if(casillaFinal=="1" || casillaFinal=="4"|| casillaFinal == "8" || casillaFinal =="9"){
+					return true;
+				}else{return false;}
+				
 			case "8":
 				//casillas validas 2,5,7,9
-				break;
+				if(casillaFinal=="2" || casillaFinal=="5"|| casillaFinal == "7" || casillaFinal =="9"){
+					return true;
+				}else{return false;}
+				
 			case "9":
 				//casillas validas 3,6,7,8
-				break;
+				if(casillaFinal=="3" || casillaFinal=="6"|| casillaFinal == "7" || casillaFinal =="8"){
+					return true;
+				}else{return false;}
+				
 		}
 		return false;
 	}

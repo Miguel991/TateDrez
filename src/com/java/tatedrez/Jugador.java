@@ -37,10 +37,43 @@ public class Jugador {
 		
 		
 	}
-	
-	public PosicionesEnum getCasillaUno() {
-		return casillaUno;
+	//Modificacion para acortar el codigo en el main
+	public String getCasillaUno() {
+		return casillaUno.getNombreEnum();
 	}
+	
+	public String getCasillaDos() {
+		return casillaDos.getNombreEnum();
+	}
+
+	public String getCasillaTres() {
+		return casillaTres.getNombreEnum();
+	}
+
+	public String getCasillaCuatro() {
+		return casillaCuatro.getNombreEnum();
+	}
+
+	public String getCasillaCinco() {
+		return casillaCinco.getNombreEnum();
+	}
+
+	public String getCasillaSeis() {
+		return casillaSeis.getNombreEnum();
+	}
+
+	public String getCasillaSiete() {
+		return casillaSiete.getNombreEnum();
+	}
+
+	public String getCasillaOcho() {
+		return casillaOcho.getNombreEnum();
+	}
+
+	public String getCasillaNueve() {
+		return casillaNueve.getNombreEnum();
+	}
+
 
 	public void jugadorPoneFichaPorPrimeraVez(Pieza pieza, String casilla,Tablero tablero){
 		m.ponerPiezaEnCasilla(pieza, casilla, tablero);

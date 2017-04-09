@@ -31,31 +31,57 @@ public class Alfil extends Pieza {
 		switch(casillaActual){
 			case "1":
 				//casillas validas 5,9
-				//fijarse si la casilla a la que se quiere mover la ficha esta dentro las posibilidades desde la posicione 
-				//en que se encuentra la ficha 
+				if(casillaFinal=="5" || casillaFinal=="9"){
+					return true;
+				}else{return false;}
+				
 			case "2":
 				//casillas validas 4,6
+				if(casillaFinal=="4" || casillaFinal=="6"){
+					return true;
+				}else{return false;}
 				
 			case "3":
 				//casillas validas 5,7
+				if(casillaFinal=="5" || casillaFinal=="7"){
+					return true;
+				}else{return false;}
 				
 			case "4":
 				//casillas validas 2,8
+				if(casillaFinal=="2" || casillaFinal=="8"){
+					return true;
+				}else{return false;}
 				
 			case "5":
 				//casilla validas 1,3,7,9
+				if(casillaFinal=="1" || casillaFinal=="3"||casillaFinal == "7"||casillaFinal=="9"){
+					return true;
+				}else{return false;}
 				
 			case "6":
 				//casillas validas 2,8
+				if(casillaFinal=="2" || casillaFinal=="8"){
+					return true;
+				}else{return false;}
 				
 			case "7":
 				//casillas validas 3,5
+				if(casillaFinal=="3" || casillaFinal=="5"){
+					return true;
+				}else{return false;}
 				
 			case "8":
 				//casillas validas 4,6
+				if(casillaFinal=="4" || casillaFinal=="6"){
+					return true;
+				}else{return false;}
 				
 			case "9":
 				//casillas validas 1,5
+				if(casillaFinal=="1" || casillaFinal=="5"){
+					return true;
+				}else{return false;}
 				
 		}
 		return false;
