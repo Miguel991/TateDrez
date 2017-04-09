@@ -1,106 +1,106 @@
 package com.java.tatedrez;
 
 public class Player {
-	private ManagerChessboard m;
-	private String nombre;
-	private Rook torre;
-	private Bishop alfil;
-	private Knight caballo;
-	private Chessboard tablero;
-	private PositionEnum casillaUno;
-	private PositionEnum casillaDos;
-	private PositionEnum casillaTres;
-	private PositionEnum casillaCuatro;
-	private PositionEnum casillaCinco;
-	private PositionEnum casillaSeis;
-	private PositionEnum casillaSiete;
-	private PositionEnum casillaOcho;
-	private PositionEnum casillaNueve;
+	private ManagerChessboard manager;
+	private String name;
+	private Rook rook;
+	private Bishop bishop;
+	private Knight knight;
+	private Chessboard chessboard;
+	private PositionEnum squareOne;
+	private PositionEnum squareTwo;
+	private PositionEnum squareThree;
+	private PositionEnum squareFour;
+	private PositionEnum squareFive;
+	private PositionEnum squareSix;
+	private PositionEnum squareSeven;
+	private PositionEnum squareEight;
+	private PositionEnum squareNine;
 	
 	
-	public Player(String nombre,Chessboard tablero){
-		this.tablero = tablero;
-		this.nombre = nombre;
-		this.torre = new Rook();
-		this.alfil = new Bishop();
-		this.caballo = new Knight();
-		this.m = new ManagerChessboard();
-		this.casillaUno = PositionEnum.CASILLAUNO;
-		this.casillaDos = PositionEnum.CASILLADOS;
-		this.casillaTres = PositionEnum.CASILLATRES;
-		this.casillaCuatro = PositionEnum.CASILLACUATRO;
-		this.casillaCinco = PositionEnum.CASILLACINCO;
-		this.casillaSeis = PositionEnum.CASILLASEIS;
-		this.casillaSiete = PositionEnum.CASILLASIETE;
-		this.casillaOcho = PositionEnum.CASILLAOCHO;
-		this.casillaNueve = PositionEnum.CASILLANUEVE;
+	public Player(String name,Chessboard chessboard){
+		this.chessboard = chessboard;
+		this.name = name;
+		this.rook = new Rook();
+		this.bishop = new Bishop();
+		this.knight = new Knight();
+		this.manager = new ManagerChessboard();
+		this.squareOne = PositionEnum.CASILLAUNO;
+		this.squareTwo = PositionEnum.CASILLADOS;
+		this.squareThree = PositionEnum.CASILLATRES;
+		this.squareFour = PositionEnum.CASILLACUATRO;
+		this.squareFive = PositionEnum.CASILLACINCO;
+		this.squareSix = PositionEnum.CASILLASEIS;
+		this.squareSeven = PositionEnum.CASILLASIETE;
+		this.squareEight = PositionEnum.CASILLAOCHO;
+		this.squareNine = PositionEnum.CASILLANUEVE;
 		
 		
 	}
 	//Modificacion para acortar el codigo en el main
-	public String getCasillaUno() {
-		return casillaUno.getNameEnum();
+	public String getSquareOne() {
+		return squareOne.getNameEnum();
 	}
 	
-	public String getCasillaDos() {
-		return casillaDos.getNameEnum();
+	public String getSquareTwo() {
+		return squareTwo.getNameEnum();
 	}
 
-	public String getCasillaTres() {
-		return casillaTres.getNameEnum();
+	public String getSquareThree() {
+		return squareThree.getNameEnum();
 	}
 
-	public String getCasillaCuatro() {
-		return casillaCuatro.getNameEnum();
+	public String getSquareFour() {
+		return squareFour.getNameEnum();
 	}
 
-	public String getCasillaCinco() {
-		return casillaCinco.getNameEnum();
+	public String getSquareFive() {
+		return squareFive.getNameEnum();
 	}
 
-	public String getCasillaSeis() {
-		return casillaSeis.getNameEnum();
+	public String getSquareSix() {
+		return squareSix.getNameEnum();
 	}
 
-	public String getCasillaSiete() {
-		return casillaSiete.getNameEnum();
+	public String getSquareSeven() {
+		return squareSeven.getNameEnum();
 	}
 
-	public String getCasillaOcho() {
-		return casillaOcho.getNameEnum();
+	public String getSquareEight() {
+		return squareEight.getNameEnum();
 	}
 
-	public String getCasillaNueve() {
-		return casillaNueve.getNameEnum();
+	public String getSquareNine() {
+		return squareNine.getNameEnum();
 	}
 
 
-	public void jugadorPoneFichaPorPrimeraVez(Piece pieza, String casilla,Chessboard tablero){
-		m.putPieceInSquare(pieza, casilla, tablero);
+	public void playerPutPieceForTheFirstTime(Piece piece, String square,Chessboard chessboard){
+		manager.putPieceInSquare(piece, square, chessboard);
 	}
 	
-	public void jugadorMueveFicha(Piece pieza, String nombreCasilla, Chessboard tablero){
-		m.movePiece(pieza, nombreCasilla,tablero);
+	public void playerMovesPiece(Piece piece, String nameSquare, Chessboard chessboard){
+		manager.movePiece(piece, nameSquare,chessboard);
 	}
 	
 	//para acceder a las piezas que tiene el jugador
-	public Piece getTorre(){
-		return this.torre;
+	public Piece getRook(){
+		return this.rook;
 	}
-	public Piece getAfil(){
-		return this.alfil;
+	public Piece getBishop(){
+		return this.bishop;
 	}
-	public Piece getCaballo(){
-		return this.caballo;
+	public Piece getKnight(){
+		return this.knight;
 	}
 	
 	
-	public void setTablero(Chessboard tablero){
+	public void setChessboard(Chessboard chessboard){
 		//this.tablero = tablero;
 	}
-	public Chessboard getTablero(){
+	public Chessboard getChessboard(){
 		
-		return this.tablero;
+		return this.chessboard;
 	}
 
 }

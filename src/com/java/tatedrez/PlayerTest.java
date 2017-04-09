@@ -21,8 +21,8 @@ public class PlayerTest {
 
 	@Test
 	public void siCambiaTablero() {
-		j.setTablero(t1);
-		assertTrue(j.getTablero()!= t);
+		j.setChessboard(t1);
+		assertTrue(j.getChessboard()!= t);
 	}
 
 }

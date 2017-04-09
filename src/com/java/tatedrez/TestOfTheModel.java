@@ -1,6 +1,6 @@
 package com.java.tatedrez;
 
-public class Principal {
+public class TestOfTheModel {
 	
 
 	public static void main(String[] args) {
@@ -9,9 +9,9 @@ public class Principal {
 		Player p1 = new Player("Player One", chessboard);
 		Player p2 = new Player("Player Two", chessboard);
 		
-		p1.jugadorPoneFichaPorPrimeraVez(p1.getCaballo(), p1.getCasillaUno(), chessboard);
-		p1.jugadorMueveFicha(p1.getCaballo(), p1.getCasillaCinco(), chessboard);
-		p1.jugadorMueveFicha(p1.getCaballo(), p1.getCasillaSeis(), chessboard);
+		p1.playerPutPieceForTheFirstTime(p1.getKnight(), p1.getSquareOne(), chessboard);
+		p1.playerMovesPiece(p1.getKnight(), p1.getSquareFive(), chessboard);
+		p1.playerMovesPiece(p1.getKnight(), p1.getSquareSix(), chessboard);
 
 
 		
