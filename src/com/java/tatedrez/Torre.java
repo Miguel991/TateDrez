@@ -1,39 +1,39 @@
 package com.java.tatedrez;
 
-public class Torre extends Pieza{
+public class Torre extends Piece{
 	
 	private String posicion;
 	private String nombre = "torre";
 
 	@Override
-	public String getNombre() {
+	public String getName() {
 		// TODO Auto-generated method stub
 		return this.nombre;
 	}
 
 	@Override
-	public void moverFicha(Casilla casilla) {
-		casilla.setPieza(this);
+	public void movePiece(Square casilla) {
+		casilla.setPiece(this);
 	}
 	
 	
 
 	@Override
-	public void setPosicionFicha(String posicion) {
+	public void setPositionPiece(String posicion) {
 		// TODO Auto-generated method stub
 		this.posicion = posicion;
 		
 	}
 
 	@Override
-	public String getPosicionFicha() {
+	public String getPositionPiece() {
 		// TODO Auto-generated method stub
 		return this.posicion;
 	}
 
 
 	@Override
-	public boolean posicionValidaPieza(String casillaActual,String casillaFinal) {
+	public boolean positionValidForThePiece(String casillaActual,String casillaFinal) {
 		switch(casillaActual){
 			case "1":
 				//casillas validas 2,3,4,7

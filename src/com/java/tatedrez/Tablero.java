@@ -4,30 +4,30 @@ import java.util.ArrayList;
 
 public class Tablero {
 	
-	private Casilla casillaUno;
-	private Casilla casillaDos;
-	private Casilla casillaTres;
-	private Casilla casillaCuatro;
-	private Casilla casillaCinco;
-	private Casilla casillaSeis;
-	private Casilla casillaSiete;
-	private Casilla casillaOcho;
-	private Casilla casillaNueve;
-	private ArrayList<Casilla> listaCasillas;
+	private Square casillaUno;
+	private Square casillaDos;
+	private Square casillaTres;
+	private Square casillaCuatro;
+	private Square casillaCinco;
+	private Square casillaSeis;
+	private Square casillaSiete;
+	private Square casillaOcho;
+	private Square casillaNueve;
+	private ArrayList<Square> listaCasillas;
 	
 	public Tablero(){
 	//norte,noreste,este,sureste,sur,suroeste,oeste,noroeste
 		
-		this.casillaUno = new Casilla("1",null,null,"este","sureste","sur",null,null,null);
-		this.casillaDos = new Casilla("2",null,null,"este","sureste","sur","suroeste","oeste",null);
-		this.casillaTres = new Casilla("3",null,null,null,null,"sur","suroeste","oeste",null);
-		this.casillaCuatro = new Casilla("4","norte","noreste","este","sureste","sur",null,null,null);
-		this.casillaCinco = new Casilla("5","norte","noreste","este","sureste","sur","suroeste","oeste","noroeste");
-		this.casillaSeis = new Casilla("6","norte",null,null,null,"sur","suroeste","oeste","noroeste");
-		this.casillaSiete = new Casilla("7","norte","noreste","este",null,null,null,null,null);
-		this.casillaOcho = new Casilla("8","norte","noreste","este",null,null,null,"oeste","noroeste");
-		this.casillaNueve = new Casilla("9","norte",null,null,null,null,null,"oeste","noroeste");
-		listaCasillas = new ArrayList<Casilla>(9);
+		this.casillaUno = new Square("1",null,null,"este","sureste","sur",null,null,null);
+		this.casillaDos = new Square("2",null,null,"este","sureste","sur","suroeste","oeste",null);
+		this.casillaTres = new Square("3",null,null,null,null,"sur","suroeste","oeste",null);
+		this.casillaCuatro = new Square("4","norte","noreste","este","sureste","sur",null,null,null);
+		this.casillaCinco = new Square("5","norte","noreste","este","sureste","sur","suroeste","oeste","noroeste");
+		this.casillaSeis = new Square("6","norte",null,null,null,"sur","suroeste","oeste","noroeste");
+		this.casillaSiete = new Square("7","norte","noreste","este",null,null,null,null,null);
+		this.casillaOcho = new Square("8","norte","noreste","este",null,null,null,"oeste","noroeste");
+		this.casillaNueve = new Square("9","norte",null,null,null,null,null,"oeste","noroeste");
+		listaCasillas = new ArrayList<Square>(9);
 		listaCasillas.add(casillaUno);
 		listaCasillas.add(casillaDos);
 		listaCasillas.add(casillaTres);
@@ -40,43 +40,43 @@ public class Tablero {
 
 	}
 	
-	public ArrayList<Casilla> getArrayCasillas(){
+	public ArrayList<Square> getArrayCasillas(){
 		return listaCasillas;
 	}
 
-	public Casilla getCasillaUno() {
+	public Square getCasillaUno() {
 		return casillaUno;
 	}
 
-	public Casilla getCasillaDos() {
+	public Square getCasillaDos() {
 		return casillaDos;
 	}
 
-	public Casilla getCasillaTres() {
+	public Square getCasillaTres() {
 		return casillaTres;
 	}
 
-	public Casilla getCasillaCuatro() {
+	public Square getCasillaCuatro() {
 		return casillaCuatro;
 	}
 
-	public Casilla getCasillaCinco() {
+	public Square getCasillaCinco() {
 		return casillaCinco;
 	}
 
-	public Casilla getCasillaSeis() {
+	public Square getCasillaSeis() {
 		return casillaSeis;
 	}
 
-	public Casilla getCasillaSiete() {
+	public Square getCasillaSiete() {
 		return casillaSiete;
 	}
 
-	public Casilla getCasillaOcho() {
+	public Square getCasillaOcho() {
 		return casillaOcho;
 	}
 
-	public Casilla getCasillaNueve() {
+	public Square getCasillaNueve() {
 		return casillaNueve;
 	}
 

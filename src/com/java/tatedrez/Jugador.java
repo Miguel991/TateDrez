@@ -4,7 +4,7 @@ public class Jugador {
 	private ManagerTablero m;
 	private String nombre;
 	private Torre torre;
-	private Alfil alfil;
+	private Bishop alfil;
 	private Caballo caballo;
 	private Tablero tablero;
 	private PosicionesEnum casillaUno;
@@ -22,7 +22,7 @@ public class Jugador {
 		this.tablero = tablero;
 		this.nombre = nombre;
 		this.torre = new Torre();
-		this.alfil = new Alfil();
+		this.alfil = new Bishop();
 		this.caballo = new Caballo();
 		this.m = new ManagerTablero();
 		this.casillaUno = PosicionesEnum.CASILLAUNO;
@@ -75,22 +75,22 @@ public class Jugador {
 	}
 
 
-	public void jugadorPoneFichaPorPrimeraVez(Pieza pieza, String casilla,Tablero tablero){
+	public void jugadorPoneFichaPorPrimeraVez(Piece pieza, String casilla,Tablero tablero){
 		m.ponerPiezaEnCasilla(pieza, casilla, tablero);
 	}
 	
-	public void jugadorMueveFicha(Pieza pieza, String nombreCasilla, Tablero tablero){
+	public void jugadorMueveFicha(Piece pieza, String nombreCasilla, Tablero tablero){
 		m.moverPieza(pieza, nombreCasilla,tablero);
 	}
 	
 	//para acceder a las piezas que tiene el jugador
-	public Pieza getTorre(){
+	public Piece getTorre(){
 		return this.torre;
 	}
-	public Pieza getAfil(){
+	public Piece getAfil(){
 		return this.alfil;
 	}
-	public Pieza getCaballo(){
+	public Piece getCaballo(){
 		return this.caballo;
 	}
 	
