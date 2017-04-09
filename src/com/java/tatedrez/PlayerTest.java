@@ -5,17 +5,17 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JugadorTest {
+public class PlayerTest {
 	
-	private Tablero t;
-	private Tablero t1;
-	private Jugador j;
+	private Chessboard t;
+	private Chessboard t1;
+	private Player j;
 
 	@Before
 	public void setUp() throws Exception {
-		t = new Tablero();
-		t1 = new Tablero();
-		j = new Jugador("Mario",t);
+		t = new Chessboard();
+		t1 = new Chessboard();
+		j = new Player("Mario",t);
 		
 	}
 

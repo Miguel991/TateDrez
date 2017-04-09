@@ -5,13 +5,13 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		Tablero tablero = new Tablero();
-		Jugador p1 = new Jugador("Jugador Uno", tablero);
-		Jugador p2 = new Jugador("Jugador Dos", tablero);
+		Chessboard chessboard = new Chessboard();
+		Player p1 = new Player("Player One", chessboard);
+		Player p2 = new Player("Player Two", chessboard);
 		
-		p1.jugadorPoneFichaPorPrimeraVez(p1.getCaballo(), p1.getCasillaUno(), tablero);
-		p1.jugadorMueveFicha(p1.getCaballo(), p1.getCasillaCinco(), tablero);
-		p1.jugadorMueveFicha(p1.getCaballo(), p1.getCasillaSeis(), tablero);
+		p1.jugadorPoneFichaPorPrimeraVez(p1.getCaballo(), p1.getCasillaUno(), chessboard);
+		p1.jugadorMueveFicha(p1.getCaballo(), p1.getCasillaCinco(), chessboard);
+		p1.jugadorMueveFicha(p1.getCaballo(), p1.getCasillaSeis(), chessboard);
 
 
 		
