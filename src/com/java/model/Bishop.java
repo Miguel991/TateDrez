@@ -1,4 +1,4 @@
-package com.java.tatedrez;
+package com.java.model;
 
 public class Bishop extends Piece {
 	private String position;

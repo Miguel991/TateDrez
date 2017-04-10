@@ -1,4 +1,4 @@
-package com.java.tatedrez;
+package com.java.model;
 
 public class Knight extends Piece {
 	

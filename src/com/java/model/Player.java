@@ -1,4 +1,4 @@
-package com.java.tatedrez;
+package com.java.model;
 
 public class Player {
 	private ManagerChessboard manager;
