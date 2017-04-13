@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 public class ChessboardView extends JPanel implements Runnable {
 	
 	private Thread thread;
-	private int x,y;
+	private int positionBackgroundX,positionBackgroundY;
 	private final int SLEEP = 100;
 	private Image wallpaper;
 	private final String ImagePathBackground = "/drawable/chess-board.png";
@@ -37,7 +37,7 @@ public class ChessboardView extends JPanel implements Runnable {
 	@Override
 	public void run() {
 		while(true){
-			ciclo();
+			loop();
 			repaint();
 			try{
 				Thread.sleep(SLEEP);
@@ -48,7 +48,7 @@ public class ChessboardView extends JPanel implements Runnable {
 	}
 
 //Actualizar coordenadas para imagenes
-	public void ciclo() {
+	public void loop() {
 		
 	}
 
@@ -60,6 +60,8 @@ public class ChessboardView extends JPanel implements Runnable {
 		//dibujamos las imagenes que se van a mostrar en el tablero
 		g2.drawImage(wallpaper, 12,12,null);//Agregamos la imagen de fondo
 		//aca ponemos nuestras imagenes de fichas y actualizamos sus coordenadas conforme el jugador vaya moviendo las fichas
+		
+		//g2.drawImage(rook.getImage(), rook.getX(), rook.getY(),this); ejemplo para agregar torre
 		
 		Toolkit.getDefaultToolkit().sync();
 		g.dispose();
