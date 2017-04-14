@@ -7,31 +7,36 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class ChessboardView extends JPanel implements Runnable {
+/**
+ * @author HMC software Development
+ */
+public class ChessboardView extends JFrame implements Runnable {
 	
+	private static final long serialVersionUID = 1L;
+	private static final int windowSize = 400;
 	private Thread thread;
-	private int positionBackgroundX,positionBackgroundY;
+	private static final int positionBackground = 61;
 	private final int SLEEP = 100;
-	private Image wallpaper;
-	private final String ImagePathBackground = "/drawable/chess-board.png";
-	//private ViewController viewController;
-	//private String imagePath = "/drawable/torre.png" ESTO ESTA MAL EL TABLERO NO TIENE PORQUE SABER DE DONDE VIENE LA IMAGEN DE LAS PIEZAS
-	//private EnumPositionPiece enum ; Esto esta relativamente bien ya que el tablero puede llegar a conocer las posiciones de las casillas en coordenadas x-y
-	//Un manager de tablero no puede conocer a la vista se estaria rompiendo el modelo vista controlador
+	private ImageIcon wallpaper;
+	private ManagerResources sources = ManagerResources.getInstance();
+	private RookView rookPlayerOne;
+	private RookView rookPlayerTwo;
 	
 	public ChessboardView(){
-		setBackground(Color.DARK_GRAY);
-		setDoubleBuffered(true);
-		wallpaper = new ImageIcon(this.getClass().getResource(ImagePathBackground)).getImage();
-		
-		//ahora tendriamos que poner los objetos que se van a inicializar cuando se cree una vista del tablero
-		//como por ejemplo las vista de las piezas y otras imagenes
-		//inicializar no necesariamente es imprimir en pantallar
-		
-		//viewController = new ViewController();
-		
+		setLayout(null);
+		rookPlayerOne = new RookView(80,80,"Rook PlayerOne");
+		rookPlayerTwo = new RookView(270,80,"Rook PlayerTwo");
+		wallpaper = sources.getImagenBackground();
+		addMouseListener(rookPlayerOne);
+		addMouseListener(rookPlayerTwo);
+		pack();
+		setSize(windowSize,windowSize);
+		setResizable(false);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
 	@Override
@@ -42,12 +47,11 @@ public class ChessboardView extends JPanel implements Runnable {
 			try{
 				Thread.sleep(SLEEP);
 			}catch(InterruptedException err){
-				System.err.println(err);
+				System.out.println(err);
 			}
 		}		
 	}
 
-//Actualizar coordenadas para imagenes
 	public void loop() {
 		
 	}
@@ -55,14 +59,12 @@ public class ChessboardView extends JPanel implements Runnable {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		Graphics2D g2 = (Graphics2D)g;
+		Graphics2D g2 = (Graphics2D)g.create();
 		
-		//dibujamos las imagenes que se van a mostrar en el tablero
-		g2.drawImage(wallpaper, 12,12,null);//Agregamos la imagen de fondo
-		//aca ponemos nuestras imagenes de fichas y actualizamos sus coordenadas conforme el jugador vaya moviendo las fichas
-		
-		//g2.drawImage(rook.getImage(), rook.getX(), rook.getY(),this); ejemplo para agregar torre
-		
+		g2.drawImage(wallpaper.getImage(), positionBackground,positionBackground,null);		
+		g2.drawImage(rookPlayerOne.getImagenRook(), rookPlayerOne.getPoint().x, rookPlayerOne.getPoint().y,this);
+		g2.drawImage(rookPlayerTwo.getImagenRook(), rookPlayerTwo.getPoint().x, rookPlayerTwo.getPoint().y,this);
+	
 		Toolkit.getDefaultToolkit().sync();
 		g.dispose();
 	}
