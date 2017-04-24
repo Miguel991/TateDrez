@@ -40,22 +40,7 @@ public class RookView extends JPanel implements MouseListener{
 		this.listRook.add(rookView);		
 	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		//at this point we would have to call the controller
-		for(RookView list: listRook){
-			if(list.getRectangle().contains(e.getPoint())){
-				System.out.println("******************************************");
-				System.out.println("You choice the piece: "+ list.getName());
-				if(list.conditionOfPiece() == false){
-					list.selectedPiece(list);
-				}else{
-					list.deselectedPiece(list);
-				}
-			}
-		}
-		
-	}
+
 	
 	public void deselectedPiece(RookView rook){
 		this.rookSelect = false;
